@@ -10,7 +10,7 @@
 }
 
 .new-tweet {
-  width: 70%;
+  width: 100%;
 }
 
 .action-container {
@@ -35,7 +35,7 @@ textarea#tweet-text::placeholder {
 }
 
 #tweet-button {
-  border-top           : 1px solid #96d1f8;
+  border          : 1px solid #96d1f8;
   background           : #6585d6;
   background           : -webkit-gradient(linear, left top, left bottom, from(#3e539c), to(#6585d6));
   background           : -webkit-linear-gradient(top, #3e539c, #6585d6);
@@ -78,7 +78,6 @@ textarea#tweet-text::placeholder {
 }
 
 section {
-  height          : 100%;
   background-color: #dad1ba;
   margin          : 1em;
 }
@@ -94,11 +93,20 @@ article.shared-tweet {
   flex-direction: column;
   margin        : 20px;
   border        : 4px solid #424144;
+  background-color: #dad1ba;
   transition    : box-shadow .3s;
 }
 
 article.shared-tweet:hover {
   box-shadow: 0 0 20px rgba(6, 2, 31, 0.2);
+}
+
+article.shared-tweet div.tweet-icons {
+  visibility: hidden;
+}
+
+article.shared-tweet:hover div.tweet-icons {
+  visibility: visible;
 }
 
 footer.shared-tweet {
@@ -176,22 +184,31 @@ header.image-container>img {
 }
 
 #myBtn {
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: rgb(197, 56, 56); /* Set a background color */
-  color: white; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
+  display: none; 
+  position: fixed; 
+  bottom: 20px; 
+  right: 30px; 
+  z-index: 99; 
+  border: none; 
+  outline: none; 
+  background-color: rgb(197, 56, 56); 
+  color: white; 
+  cursor: pointer; 
+  padding: 15px; 
+  border-radius: 10px; 
+  font-size: 18px; 
 }
 
 #myBtn:hover {
   background-color: rgb(231, 89, 89); 
 }
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+
 
