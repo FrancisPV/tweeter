@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .tweet-container {
   display         : flex;
   flex-direction  : column;
@@ -12,19 +16,20 @@
 .action-container {
   display        : flex;
   justify-content: space-between;
-  margin         : 20px;
+  margin         : 0.6em;
 }
 
 textarea {
-  height: 70%;
+  height          : 70%;
   background-color: #dad1ba;
-  margin: 20px;
-  resize: none;
-  border: unset;
-  border-bottom: 4px solid #424144;
+  margin          : 1em;
+  resize          : none;
+  border          : unset;
+  border-bottom   : 4px solid #424144;
 }
+
 textarea#tweet-text::placeholder {
-  color: #545149;
+  color      : #545149;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 700;
 }
@@ -54,7 +59,7 @@ textarea#tweet-text::placeholder {
 
 #tweet-button:hover {
   border-top-color: #28597a;
-  background      : #28597a;
+  background      : #0c4685;
   color           : #d9d5d9;
 }
 
@@ -64,82 +69,129 @@ textarea#tweet-text::placeholder {
 }
 
 #char-limit {
-  font-family          : 'Bungee', cursive;
-  color: #424144;
+  font-family: 'Bungee', cursive;
+  color      : #424144;
 }
 
-#char-limit.counter.red-text{
+#char-limit.counter.red-text {
   color: red;
 }
 
 section {
-  height: 100%;
+  height          : 100%;
   background-color: #dad1ba;
-  margin: 20px;
+  margin          : 1em;
 }
 
-div.tweet{
-  height: 3em;
+div.tweet {
+  height       : 3em;
   border-bottom: 4px solid #424144;
-  margin: 10px;
+  margin       : 1em;
 }
 
 article.shared-tweet {
-  display: flex;
+  display       : flex;
   flex-direction: column;
-  margin: 20px;
-  border: 4px solid #424144;
-  transition: box-shadow .3s;
+  margin        : 20px;
+  border        : 4px solid #424144;
+  transition    : box-shadow .3s;
 }
 
 article.shared-tweet:hover {
-  box-shadow: 0 0 20px rgba(6, 2, 31, 0.2); 
+  box-shadow: 0 0 20px rgba(6, 2, 31, 0.2);
 }
 
 footer.shared-tweet {
-  display: flex;
+  display        : flex;
   justify-content: space-between;
-  margin: 10px;
+  margin         : 10px;
 }
 
-footer.shared-tweet > span {
-  margin: 0;
+footer.shared-tweet>span {
+  margin     : 0;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
-  font-size: .6em;
+  font-size  : .6em;
 }
 
 div.tweet-icons {
-  margin: 5px;
+  margin     : 5px;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
-  font-size: .6em;
-  color: #4056A1;
+  font-size  : .6em;
+  color      : #4056A1;
 }
 
 #tweeter-name {
-  margin: 20px;
+  margin     : 20px;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
-  font-size: 1em;
+  font-size  : 1em;
+}
+
+#tweeter-name.highlight {
+  font-weight: bold;
 }
 
 header.image-container {
-  display: flex;
+  display        : flex;
   justify-content: space-between;
+  margin-left: 0.5em;
+  margin-top: 0.5em;
 }
 
-header.image-container > img {
-  width: 75px;
+header.image-container>img {
+  width : 75px;
   height: auto;
 }
 
-.tweeter-name {
-  display: none;
+.error {
+  height: 2.5em;
+  visibility: hidden;
+  display         : flex;
+  justify-content : space-around;
+  align-self      : stretch;
+  align-items: center;
+  background-color: #FFBABA;
+  color           : #D8000C;
+  margin-top      : 0px;
+  font-family     : 'Source Sans Pro', sans-serif;
+  font-weight     : 300;
+  font-size       : .7em;
+  margin-left     : 20px;
+  margin-right    : 20px;
+  border: 1px solid #D8000C;
+  background-image: url('https://i.imgur.com/GnyDvKN.png');
+  background-repeat: no-repeat;
+  background-position: 50px center;
 }
 
+.error.show {
+  visibility: visible;
+}
 
+#tweet-text {
+  margin-bottom: 0em;
 
+}
 
-  
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: rgb(197, 56, 56); /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: rgb(231, 89, 89); 
+}
 
