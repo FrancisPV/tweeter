@@ -29,6 +29,8 @@
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
 
@@ -38,7 +40,8 @@
 <body>
   <!-- Top nav bar (fixed) -->
   <nav>
-    <span>tweeter</span>
+    <span class="app-title">tweeter</span>
+    <button class="btn1">Write a new tweet</button>
   </nav>
 
   <header class="page-header">
@@ -47,7 +50,7 @@
     </div>
     <br>
     <div>
-      <h2 class="your-name">Your Name</h2>
+      <h2 class="your-name">Françis Pellerin-Venne</h2>
     </div>
   </header>
 
@@ -57,6 +60,9 @@
       <form method="post" action="/tweets">
         <div class="tweet-container">
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+          <div id="tweet-error" class="error">
+            Your tweet must contain at least 1 character and less than 140 characters
+          </div>
           <div class="action-container">
             <button id= "tweet-button" type="submit">Tweet</button>
             <output id="char-limit"name="counter" class="counter" for="tweet-text">140</output>
@@ -64,27 +70,33 @@
         </div>
       </form>
 
-      <article class="shared-tweet"> 
-        <header class="image-container">
-            <img src="/images/profile-hex.png">
-            <span id="tweeter-name" class="tweeter-name">Francis</span>
-        </header>
-        <div class="tweet">
-          Hello World
-        </div>
-        <footer class="shared-tweet"> 
-          <span>10 days ago</span>
-          <div class="tweet-icons">
-            <i class="fa fa-heart" aria-hidden="true"></i>
-            <i class="fa fa-retweet" aria-hidden="true"></i>
-            <i class="fa fa-flag" aria-hidden="true"></i>
-          </div>
-          </footer>
-        </footer>
-      </article>
+      <div id="tweet-list"></div>
 
     </section>
+    
   </main>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  <script>
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+    
+    // When the user scrolls down from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
 </body>
 
 </html>
