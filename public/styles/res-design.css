@@ -1,0 +1,110 @@
+@media only screen and (min-width: 768px){
+  .tweet-column {
+    width: 200%;
+    margin-top: 3em;
+  }
+  header.page-header {
+    margin-top: 3em;
+  }
+  
+}
+
+
+@media only screen and (max-width: 767px) {
+  nav {
+    background-color: #cc8800;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+    color                : #424144;
+  }
+
+  .row {
+    display        : flex;
+    flex-direction : column;
+    justify-content: space-around;
+  }
+  div > img {
+    width: 175px;
+  }
+  body {
+    background-color: #dad1ba;
+    background-image: unset;
+  }
+  main {
+    background-color: #dad1ba;
+    background-image: unset; 
+  }
+  header.page-header {
+    width: 100%;
+    background-color: #cc8800;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+    padding: 2em;
+  }
+  #tweet-button {
+    border          : 1px solid #cf9134;
+    background           : #e2b523;
+    background           : -webkit-gradient(linear, left top, left bottom, from(#d39d3a), to(#e28a05));
+    background           : -webkit-linear-gradient(top, #f3b440, #d6ab34);
+    background           : -moz-linear-gradient(top, #eba308, #bb9630);
+    background           : -ms-linear-gradient(top, #da9516, #be7d05);
+    background           : -o-linear-gradient(top, #e49415, #f88d01);
+    padding              : 8px 16px;
+    -webkit-border-radius: 1px;
+    -moz-border-radius   : 1px;
+    border-radius        : 1px;
+    -webkit-box-shadow   : rgba(0, 0, 0, 1) 0 1px 0;
+    -moz-box-shadow      : rgba(0, 0, 0, 1) 0 1px 0;
+    box-shadow           : rgba(0, 0, 0, 1) 0 1px 0;
+    text-shadow          : rgba(0, 0, 0, .4) 0 1px 0;
+    color                : #424144;
+    font-size            : 15px;
+    font-family          : 'Bungee', cursive;
+    text-decoration      : none;
+    vertical-align       : middle;
+  }
+  
+  #tweet-button:hover {
+    border-top-color: #ce8908;
+    background      : #ecc440;
+    color           : #424144;
+  }
+  
+  #tweet-button:active {
+    border-top-color: #ce8908;
+    background      : #ecc440;
+  }
+
+  .btn1{
+    border          : 1px solid #cf9134;
+    background           : #e2b523;
+    background           : -webkit-gradient(linear, left top, left bottom, from(#d39d3a), to(#e28a05));
+    background           : -webkit-linear-gradient(top, #f3b440, #d6ab34);
+    background           : -moz-linear-gradient(top, #eba308, #bb9630);
+    background           : -ms-linear-gradient(top, #da9516, #be7d05);
+    background           : -o-linear-gradient(top, #e49415, #f88d01);
+    padding              : 8px 16px;
+    -webkit-border-radius: 1px;
+    -moz-border-radius   : 1px;
+    border-radius        : 1px;
+    -webkit-box-shadow   : rgba(0, 0, 0, 1) 0 1px 0;
+    -moz-box-shadow      : rgba(0, 0, 0, 1) 0 1px 0;
+    box-shadow           : rgba(0, 0, 0, 1) 0 1px 0;
+    text-shadow          : rgba(0, 0, 0, .4) 0 1px 0;
+    color                : #424144;
+    font-size            : 15px;
+    font-family          : 'Bungee', cursive;
+    text-decoration      : none;
+    vertical-align       : middle;
+  }
+  
+  .btn1:hover {
+    border-top-color: #ce8908;
+    background      : #ecc440;
+    color           : #424144;
+  }
+  
+  .btn1:active {
+    border-top-color: #ce8908;
+    background      : #ecc440;
+  }
+
+}
