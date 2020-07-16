@@ -31,10 +31,28 @@
   }
 ]; */
 
+//sanitize user input
 const escape = function(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
+};
+
+const displayDaysSince = (unixMillisec) => {
+  const currentTime = new Date(). getTime();
+  const diff = currentTime - unixMillisec;
+  const days = Math.floor(diff / (24 * 3600 * 1000));
+
+  if (days === 0) {
+    return "today";
+  } else if (days === 1) {
+    return "yesterday";
+  } else if (days < 0) {
+    return "Le futur";
+  } else {
+    return `${days} days ago`;
+  }
+  
 };
 
 const createTweetElement = (tweet) => {
@@ -47,7 +65,7 @@ const createTweetElement = (tweet) => {
     ${escape(tweet.content.text)}
   </div>
   <footer class="shared-tweet"> 
-    <span>${tweet.created_at}</span>
+    <span>${displayDaysSince(tweet.created_at)}</span>
     <div class="tweet-icons">
       <i class="fa fa-heart" aria-hidden="true"></i>
       <i class="fa fa-retweet" aria-hidden="true"></i>
